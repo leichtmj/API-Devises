@@ -1,14 +1,37 @@
-﻿namespace WSConvertisseur.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WSConvertisseur.Models
 {
     public class Devise
     {
+
         private int id;
+
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
         private string nomDevise;
+
+        [Required]
+        public string NomDevise
+        {
+            get { return nomDevise; }
+            set { nomDevise = value; }
+        }
+
         private double taux;
 
-        public int Id { get => id; set => id = value; }
-        public string NomDevise { get => nomDevise; set => nomDevise = value; }
-        public double Taux { get => taux; set => taux = value; }
+        public double Taux
+        {
+            get { return taux; }
+            set { taux = value; }
+        }
+
+
+
 
 
         public Devise()
